@@ -69,7 +69,9 @@ Ghost-ը տրամադրում է **16 Windows ամրապնդման ֆունկց�
 ### Անվտանգության Գնահատում
 ```powershell
 # Բեռնել Ghost մոդուլը
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 
 # Ստուգել ընթացիկ անվտանգության դիրքը
 Get-Ghost
@@ -97,7 +99,9 @@ Set-Ghost -SMBv1 -RDP -USBStorage -Intune
 
 ### Ընտրանք 1: Ուղղակի Ներբեռնում (Փորձարկում)
 ```powershell
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 ```
 
 ### Ընտրանք 2: Մոդուլի Տեղակայում
